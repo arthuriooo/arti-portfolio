@@ -104,10 +104,10 @@ body {
   transform-style: preserve-3d;
   padding: 0;
   margin: 0;
-  transition: 0.5s;
+  transition: 1.5s;
   /* transform: rotateX(-20deg); */
 /* ------------------------------------------------------------------- */
-  animation: up 8s infinite linear;
+  /* animation: up 8s infinite linear; */
 }
 .cubeSide {
   position: absolute;
@@ -115,6 +115,7 @@ body {
   height: 100%;
   margin: 0;
   right: 0;
+  box-shadow: inset 0 0 30px black;
 }
 
 #cubeFront {
@@ -271,7 +272,7 @@ body {
 
 }
 
-.deep {
+/* .deep {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -284,4 +285,23 @@ body {
   height: 100%;
   transform: translateZ(-1000px);
   background-color: red;
+} */
+
+
+.frontContainer, .backContainer, .rightContainer, .leftContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.frontContainer {
+  /* background-color: red; */
+}
+.backContainer {
+  /* background-color: green; */
+}
+.rightContainer {
+  /* background-color: blue; */
+}
+.leftContainer {
+  /* background-color: pink; */
 }

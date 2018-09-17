@@ -123,9 +123,43 @@ $(document).ready(function(){
         []
     ];
 
+    // var degrees = [
+    //     'rotateX(45deg) rotateY(-45deg)',
+    //     'rotateX(135deg) rotateY(-135deg)',
+    //     'rotateX(-225deg) rotateY(225deg)',
+    //     'rotateX(315deg) rotateY(-315deg)'
+    // ];
+
+    var degrees = [
+        'rotateX(45deg) rotateY(-45deg)',
+        'rotateX(135deg) rotateY(-135deg)',
+        'rotateX(-225deg) rotateY(225deg)',
+        'rotateX(315deg) rotateY(-315deg)'
+    ];
+
+    // degrees[0] => 
+    // degrees[1] => 
+    // degrees[2] => 
+    // degrees[3] => 
+
+    var choosenDegree = 0;
+
+    var randomDegree = 0;
+
+    var randegree = function() {
+        // randomDegree = Math.floor(Math.random() * (4 - 0)) + 0;
+        while (randomDegree == choosenDegree) {
+            randomDegree = Math.floor(Math.random() * (4 - 0)) + 0;
+        }
+        choosenDegree = randomDegree;
+        // alert(randomDegree);
+    }
+
 
     $(".mainId").on("click", function(){
-        $("#cube").css('transform', 'rotateY(90deg)');
+        randegree();
+        var thisRotate = degrees[randomDegree];
+        $("#cube").css('transform', thisRotate);
         $(".spaceLinksBehind p").css({
             'color': '',
             'border': ''
@@ -136,7 +170,9 @@ $(document).ready(function(){
         });
     });
     $(".meId").on("click", function(){
-        $("#cube").css('transform', 'rotateY(-90deg)');
+        randegree();
+        var thisRotate = degrees[randomDegree];
+        $("#cube").css('transform', thisRotate);
         $(".spaceLinksBehind p").css({
             'color': '',
             'border': ''
@@ -147,7 +183,9 @@ $(document).ready(function(){
         });
     });
     $(".projectsId").on("click", function(){
-        $("#cube").css('transform', 'rotateX(180deg) rotateY(90deg)');
+        randegree();
+        var thisRotate = degrees[randomDegree];
+        $("#cube").css('transform', thisRotate);
         $(".spaceLinksBehind p").css({
             'color': '',
             'border': ''
@@ -158,7 +196,9 @@ $(document).ready(function(){
         });
     });
     $(".resumeId").on("click", function(){
-        $("#cube").css('transform', 'rotateX(180deg)');
+        randegree();
+        var thisRotate = degrees[randomDegree];
+        $("#cube").css('transform', thisRotate);
         $(".spaceLinksBehind p").css({
             'color': '',
             'border': ''
@@ -169,7 +209,9 @@ $(document).ready(function(){
         });
     });
     $(".contactsId").on("click", function(){
-        $("#cube").css('transform', 'rotateX(180deg) rotateY(-90deg)');
+        randegree();
+        var thisRotate = degrees[randomDegree];
+        $("#cube").css('transform', thisRotate);
         $(".spaceLinksBehind p").css({
             'color': '',
             'border': ''
