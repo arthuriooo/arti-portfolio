@@ -1,0 +1,137 @@
+MAIN:
+{
+    'hello'
+    flying links:
+    {
+        MAIN
+        ME
+        PROJECTS
+        RESUME
+        CONTACTS
+    }
+}
+ME:
+{
+    ...?
+    want a clean and quality code ?
+    want a beautiful and interactive site ?
+    want a fast learning developer passionating from frontend ?
+
+    [CONTACT ME] - button
+
+    myskills: {
+        [category] :
+        {
+             <something/> 
+        }
+        [category] :
+        {
+             <something/> 
+        }
+        [category] :
+        {
+             <something/> 
+        }
+        [category] :
+        {
+            <something> 
+            """
+                I  NN  N  PRO
+                I  N N N  
+                I  N  NN  GRESS
+            """
+            </something>
+        }
+        
+        ...
+    }
+}
+PROJECTS: 
+{
+    freelance:
+    {
+
+    }
+    projects: 
+    {
+        online shop posuda
+        23w11
+        belozerov
+        chain...?
+        kolhoz
+    }
+    experience:
+    {
+        freelance
+        technoserv
+        russian standart
+    }
+}
+RESUME:
+{
+    link:
+    {
+        github
+    }
+    file:
+    {
+        resume
+    }
+}
+CONTACTS: {
+    email
+    phone
+    social:
+    {
+        instagram
+        github
+        dribbble
+    }
+    messaging:
+    {
+        telegram
+        whatsapp
+    }
+}
+
+--------------
+
+colors for sides: 
+{
+    FRONT: {
+        links outside: 
+        links inside:
+        cube gradient:
+        background gradient:
+    }
+    BACK: {
+        links outside: 
+        links inside:
+        cube gradient:
+        background gradient:
+    }
+    RIGHT: {
+        links outside: 
+        links inside:
+        cube gradient:
+        background gradient:
+    }
+    LEFT: {
+        links outside: 
+        links inside:
+        cube gradient:
+        background gradient:
+    }
+    TOP: {
+        links outside: 
+        links inside:
+        cube gradient:
+        background gradient:
+    }
+    BOTTOM: {
+        links outside: 
+        links inside:
+        cube gradient:
+        background gradient:
+    }
+}

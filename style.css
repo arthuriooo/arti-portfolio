@@ -1,0 +1,287 @@
+@import 'gradients.css';
+
+@keyframes up {
+  50% {
+    /* transform: rotateY(180deg);   */
+    transform: rotateX(180deg) rotateZ(180deg) rotateZ(180deg); 
+  }
+  100% {
+    /* transform: rotateY(360deg);  */
+    transform: rotateX(360deg) rotateZ(360deg) rotateZ(360deg);
+  }
+}
+
+/* 
+
+font-family: 'M PLUS 1p', sans-serif;
+font-family: 'Comfortaa', cursive;
+font-family: 'Didact Gothic', sans-serif; 
+
+font-family: 'Anton', sans-serif;
+
+*/
+
+/*
+@font-face {
+  font-family: Raleway-Regular; Имя шрифта
+  src: url(Raleway-Regular.ttf);
+} 
+*/
+
+/* @import url('https://fonts.googleapis.com/css?family=Comfortaa|Cormorant|Cormorant+Garamond|Cormorant+Unicase|Didact+Gothic|Exo+2|Noto+Serif|Open+Sans+Condensed:300|PT+Mono|Philosopher|Playfair+Display|Prata|Russo+One|Tinos'); */
+
+body { 
+  overflow: hidden;
+  background: linear-gradient(to left, #200122, #6f0000);
+} 
+* {
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+#wholeSpace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* perspective: 1000px; */
+}
+
+.threeDimensions {
+  transform-style: preserve-3d;
+}
+
+#frontDimension {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: transparent;
+}
+#frontContainer {
+  position: absolute;
+  width: 68%;
+  height: 70%;
+  top: 15%;
+  left: 16%;
+}
+#frontContainerButtons {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#frontContainerMainItems {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: grey; */
+  /* opacity: 0.2; */
+  z-index: 2;
+  /* background-color: rgba(255,58,106, 0.2); */
+  margin: 0;
+  transform: translateZ(6000px);
+}
+#sun {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+
+#middleDimension {
+  position: absolute;
+  width: 68%;
+  height: 70%;
+  top: 15%;
+  left: 16%;
+  z-index: 2;
+  padding: 0;
+  
+}
+#cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  padding: 0;
+  margin: 0;
+  transition: 0.5s;
+  /* transform: rotateX(-20deg); */
+/* ------------------------------------------------------------------- */
+  animation: up 8s infinite linear;
+}
+.cubeSide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  right: 0;
+}
+
+#cubeFront {
+  background-color: red;
+  background: linear-gradient(to left, #4A4C4A, #373836);
+}
+#cubeBack {
+  background-color: orange;
+  background: linear-gradient(to right, #201E1F, #020205);
+}
+#cubeRight {
+  background-color: blue;
+  background: linear-gradient(to right, #F3F4F5, #DFE0E0);
+}
+#cubeLeft {
+  background-color: green;
+  background: linear-gradient(to right, #49484A, #1D1C1C);
+}
+#cubeTop {
+  /* background-color: pink; */
+  background: linear-gradient(to right, #232526, #414345);
+  box-shadow: inset 0 0 300px #232526;
+  /* transform-style: preserve-3d; */
+}
+#cubeBottom {
+  /* background-color: purple; */
+  background: linear-gradient(to right, #232526, #414345);
+  box-shadow: inset 0 0 300px #232526;
+}
+/* #cubeTopDeeper,
+#cubeTopEvenDeeper,
+#cubeTopDeepest {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+}
+#cubeBottomDeeper,
+#cubeBottomEvenDeeper,
+#cubeBottomDeepest {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+}
+
+#cubeTopDeeper {
+  transform: rotateX(90deg) translateZ(100px) translateX(5%) translateY(5%);
+  border: 15px solid red;
+}
+#cubeTopEvenDeeper {
+  transform: rotateX(90deg) translateZ(200px) translateX(5%) translateY(5%);
+  border: 15px solid red;
+}
+#cubeTopDeepest {
+  transform: rotateX(90deg) translateZ(300px) translateX(5%) translateY(5%);
+  border: 15px solid red;
+}
+
+#cubeBottomDeeper {
+  transform: rotateX(-90deg) translateZ(100px) translateX(-5%) translateY(5%);
+  border: 15px solid red;
+}
+#cubeBottomEvenDeeper {
+  transform: rotateX(-90deg) translateZ(200px) translateX(-5%) translateY(5%);
+  border: 15px solid red;
+}
+#cubeBottomDeepest {
+  transform: rotateX(-90deg) translateZ(300px) translateX(-5%) translateY(5%);
+  border: 15px solid red;
+} */
+
+
+#backDimension {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+  background: linear-gradient(to right, #232526, #414345);
+}
+
+.spaceLinks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  z-index: 5;
+}
+.spaceLinks p, .spaceLinksBehind p, .spaceBorders p {
+  position: absolute;
+  margin: 0;
+  font-size: 30px;
+  padding: 5px 10px;
+  color: rgba(255,58,106, 1);
+  cursor: pointer;
+}
+.spaceLinks p {
+  border: 3px dashed rgba(255,58,106, 0.8);
+}
+.spaceLinksBehind p {
+  border: 3px dashed red;
+  display: none;
+}
+.spaceLinksBehind {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.spaceBorders {
+  position: absolute;
+  color: black !important;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  overflow: hidden;
+}
+.spaceBorders p {
+  border: 3px solid RGBA(70, 87, 109, 1);
+  color: RGBA(66, 87, 111, 1.00);
+}
+.mainLink {
+  /* top: -5%; */
+  /* left: -5%; */
+}
+.meLink {
+
+}
+.projectLink {
+
+}
+.resumeLink {
+
+}
+.contactLink {
+
+}
+
+/* ------- */
+
+.mainId {
+
+}
+.meId {
+
+}
+.projectId {
+
+}
+.resumeId {
+
+}
+.contactId {
+
+}
+
+.deep {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.deep1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(-1000px);
+  background-color: red;
+}
