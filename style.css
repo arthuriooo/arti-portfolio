@@ -11,6 +11,7 @@
   }
 }
 
+
 /* 
 
 font-family: 'M PLUS 1p', sans-serif;
@@ -95,7 +96,6 @@ body {
   left: 16%;
   z-index: 2;
   padding: 0;
-  
 }
 #cube {
   position: relative;
@@ -213,9 +213,15 @@ body {
   cursor: pointer;
 }
 .spaceLinks p {
-  border: 3px dashed rgba(255,58,106, 0.8);
+  border: 4px double rgba(255,58,106, 0.8);
+  transition: 0.4s;
 }
-.spaceLinksBehind p {
+.spaceLinks p:hover {
+  border: 4px solid orange;
+  color: orange;
+  transform: rotateZ(360deg);
+}
+/* .spaceLinksBehind p {
   border: 3px dashed red;
   display: none;
 }
@@ -224,7 +230,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-}
+} */
 .spaceBorders {
   position: absolute;
   color: black !important;
@@ -234,7 +240,7 @@ body {
   overflow: hidden;
 }
 .spaceBorders p {
-  border: 3px solid RGBA(70, 87, 109, 1);
+  border: 4px double RGBA(70, 87, 109, 1);
   color: RGBA(66, 87, 111, 1.00);
 }
 .mainLink {
@@ -288,10 +294,27 @@ body {
 } */
 
 
-.frontContainer, .backContainer, .rightContainer, .leftContainer {
+.frontContainer, .backContainer, .rightContainer, .leftContainer, .topContainer, .bottomContainer {
   position: absolute;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frontContainer p, .backContainer p, .rightContainer p, .leftContainer p, .topContainer p, .bottomContainer p {
+  font-size: 80px;
+  color: white;
+  font-family: 'Hind', sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  background: url('marble.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position-x: 0;
+  background-position-y: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .frontContainer {
   /* background-color: red; */
@@ -305,3 +328,15 @@ body {
 .leftContainer {
   /* background-color: pink; */
 }
+.topContainer {
+  transform: rotate(45deg);
+}
+/* 
+font-family: 'Monoton', cursive;
+font-family: 'Limelight', cursive;
+font-family: 'Elsie', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Hind', sans-serif;
+font-family: 'Questrial', sans-serif; 
+*/

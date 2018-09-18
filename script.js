@@ -90,6 +90,27 @@ $(document).ready(function(){
         'right': -0.4 * contactsWidth
     });
 
+    // $('.spaceBorders .mainLink').css({
+    //     'top': -0.5 * mainHeight,
+    //     'left': -0.5 * mainWidth
+    // });
+    // $('.spaceBorders .meLink').css({
+    //     'top': -0.5 * meHeight,
+    //     'right': -0.5 * meWidth
+    // });
+    // $('.spaceBorders .projectsLink').css({
+    //     'bottom': -0.4 * projectsHeight,
+    //     'left': -0.3 * projectsWidth
+    // });
+    // $('.spaceBorders .resumeLink').css({
+    //     'bottom': -0.4 * resumeHeight,
+    //     'right': cubeWidth / 2 - 0.6 * resumeWidth
+    // });
+    // $('.spaceBorders .contactsLink').css({
+    //     'bottom': -0.4 * contactsHeight,
+    //     'right': -0.3 * contactsWidth
+    // });
+
     // var pageWidth = $(window).width();
     // var pageHeight = $(window).height(); 
 
@@ -131,36 +152,49 @@ $(document).ready(function(){
     // ];
 
     var degrees = [
-        'rotateX(45deg) rotateY(-45deg)',
-        'rotateX(135deg) rotateY(-135deg)',
-        'rotateX(-225deg) rotateY(225deg)',
-        'rotateX(315deg) rotateY(-315deg)'
+        'rotateX(0deg) rotateY(0deg)',
+        'rotateX(0deg) rotateY(90deg)',
+        'rotateX(0deg) rotateY(-90deg)',
+        'rotateX(-180deg) rotateY(180deg)',
+        'rotateX(135deg) rotateY(225deg)'
     ];
 
-    // degrees[0] => 
-    // degrees[1] => 
-    // degrees[2] => 
-    // degrees[3] => 
+    // degrees[0] => main => x 0 y 0
+    // degrees[1] => projects => x 0 y -90
+    // degrees[2] => resume => x 0 y 90
+    // degrees[3] => me => x 0 y 180
+    // degrees[4] => contacts => x 315 y 45
 
-    var choosenDegree = 0;
+    // var choosenDegree = 0;
 
-    var randomDegree = 0;
+    // var randomDegree = 0;
 
-    var randegree = function() {
-        // randomDegree = Math.floor(Math.random() * (4 - 0)) + 0;
-        while (randomDegree == choosenDegree) {
-            randomDegree = Math.floor(Math.random() * (4 - 0)) + 0;
-        }
-        choosenDegree = randomDegree;
-        // alert(randomDegree);
-    }
+    // var randegree = function() {
+    //     // randomDegree = Math.floor(Math.random() * (4 - 0)) + 0;
+    //     while (randomDegree == choosenDegree) {
+    //         randomDegree = Math.floor(Math.random() * (5 - 0)) + 0;
+    //     }
+    //     choosenDegree = randomDegree;
+    //     alert(randomDegree);
+    // }
 
+    // $(".mainId").on("click", function(){
+    //     randegree();
+    //     var thisRotate = degrees[randomDegree];
+    //     $("#cube").css('transform', thisRotate);
+    //     $(".spaceLinksBehind p").css({
+    //         'color': '',
+    //         'border': ''
+    //     });
+    //     $(".spaceLinks p").css({
+    //         'color': '',
+    //         'border': ''
+    //     });
+    // });
 
     $(".mainId").on("click", function(){
-        randegree();
-        var thisRotate = degrees[randomDegree];
-        $("#cube").css('transform', thisRotate);
-        $(".spaceLinksBehind p").css({
+        $("#cube").css('transform', 'rotateX(0deg) rotateY(0deg)');
+        $(".spaceBorders p").css({
             'color': '',
             'border': ''
         });
@@ -170,10 +204,8 @@ $(document).ready(function(){
         });
     });
     $(".meId").on("click", function(){
-        randegree();
-        var thisRotate = degrees[randomDegree];
-        $("#cube").css('transform', thisRotate);
-        $(".spaceLinksBehind p").css({
+        $("#cube").css('transform', 'rotateX(0deg) rotateY(-180deg)');
+        $(".spaceBorders p").css({
             'color': '',
             'border': ''
         });
@@ -183,10 +215,8 @@ $(document).ready(function(){
         });
     });
     $(".projectsId").on("click", function(){
-        randegree();
-        var thisRotate = degrees[randomDegree];
-        $("#cube").css('transform', thisRotate);
-        $(".spaceLinksBehind p").css({
+        $("#cube").css('transform', 'rotateX(0deg) rotateY(90deg)');
+        $(".spaceBorders p").css({
             'color': '',
             'border': ''
         });
@@ -196,10 +226,8 @@ $(document).ready(function(){
         });
     });
     $(".resumeId").on("click", function(){
-        randegree();
-        var thisRotate = degrees[randomDegree];
-        $("#cube").css('transform', thisRotate);
-        $(".spaceLinksBehind p").css({
+        $("#cube").css('transform', 'rotateX(0deg) rotateY(-90deg)');
+        $(".spaceBorders p").css({
             'color': '',
             'border': ''
         });
@@ -209,10 +237,8 @@ $(document).ready(function(){
         });
     });
     $(".contactsId").on("click", function(){
-        randegree();
-        var thisRotate = degrees[randomDegree];
-        $("#cube").css('transform', thisRotate);
-        $(".spaceLinksBehind p").css({
+        $("#cube").css('transform', 'rotateX(315deg) rotateY(45deg)');
+        $(".spaceBorders p").css({
             'color': '',
             'border': ''
         });
